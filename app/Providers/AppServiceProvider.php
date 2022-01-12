@@ -35,19 +35,24 @@ class AppServiceProvider extends ServiceProvider
                 ->label('Change Language')
                 ->sort(10)
                 ->url(url('admin/change')),
-            NavigationItem::make()
-                ->group('Dev')
-                ->icon('heroicon-o-code')
-                ->label('Artisan')
-                ->sort(10)
-                ->url(url('admin/artisan')),
-            NavigationItem::make()
-                ->group('Dev')
-                ->icon('heroicon-o-database')
-                ->label('Schema')
-                ->sort(10)
-                ->url(url('schematics')),
         ]);
+
+        if (app()->isLocal()) {
+            Filament::registerNavigationItems([
+                NavigationItem::make()
+                    ->group('Dev')
+                    ->icon('heroicon-o-code')
+                    ->label('Artisan')
+                    ->sort(10)
+                    ->url(url('admin/artisan')),
+                NavigationItem::make()
+                    ->group('Dev')
+                    ->icon('heroicon-o-database')
+                    ->label('Schema')
+                    ->sort(10)
+                    ->url(url('schematics')),
+            ]);
+        }
 
         Filament::registerNavigationGroups([
             'PMS',
