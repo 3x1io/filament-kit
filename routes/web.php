@@ -13,26 +13,3 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('admin/change', function () {
-    $user = User::find(auth()->user()->id);
-
-    if ($user->lang === 'ar') {
-        $user->lang = 'en';
-        $user->save();
-    } else if ($user->lang === 'en') {
-        $user->lang = 'ar';
-        $user->save();
-    }
-
-    session()->flash('notification', [
-        'message' => __("Language Updated To " . $user->lang),
-        'status' => "success",
-    ]);
-
-    return back();
-})->middleware('auth');

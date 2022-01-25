@@ -158,7 +158,7 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        Illuminate\Translation\TranslationServiceProvider::class,
+        Spatie\TranslationLoader\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
@@ -181,6 +181,8 @@ return [
         Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
         LaravelDaily\Invoices\InvoiceServiceProvider::class,
+        io3x1\FilamentTranslations\FilamentTranslationsProvider::class,
+        io3x1\FilamentExcel\FilamentExcelProvider::class
 
     ],
 

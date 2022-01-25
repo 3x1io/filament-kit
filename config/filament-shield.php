@@ -60,7 +60,7 @@ return [
     */
 
     'entities' => [
-        'pages' => false,
+        'pages' => true,
         'widgets' => true,
         'resources' => true,
     ],
@@ -73,7 +73,7 @@ return [
     */
 
     'tabs' => [
-        'pages' => false,
+        'pages' => true,
         'widgets' => true,
         'resources' => true,
         'custom_permissions' => false,
@@ -130,7 +130,6 @@ return [
         ],
         'widgets' => [
             'AccountWidget',
-            'FilamentInfoWidget'
         ],
         'resources' => [],
     ],

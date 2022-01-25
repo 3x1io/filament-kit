@@ -4,8 +4,11 @@ namespace App\Providers;
 
 use Filament\Facades\Filament;
 use Illuminate\Pagination\Paginator;
+use RyanChandler\FilamentTools\Tool;
+use RyanChandler\FilamentTools\Tools;
 use Filament\Navigation\NavigationItem;
 use Illuminate\Support\ServiceProvider;
+use Filament\Forms\Components\TextInput;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 
     /**
@@ -26,16 +28,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+
         Paginator::useBootstrap();
 
-        Filament::registerNavigationItems([
-            NavigationItem::make()
-                ->group('Settings')
-                ->icon('heroicon-o-translate')
-                ->label('Change Language')
-                ->sort(10)
-                ->url(url('admin/change')),
-        ]);
 
         if (app()->isLocal()) {
             Filament::registerNavigationItems([
