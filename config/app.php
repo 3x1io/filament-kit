@@ -180,9 +180,7 @@ return [
         Akaunting\Money\Provider::class,
         Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
-        LaravelDaily\Invoices\InvoiceServiceProvider::class,
-        io3x1\FilamentTranslations\FilamentTranslationsProvider::class,
-        io3x1\FilamentExcel\FilamentExcelProvider::class
+        LaravelDaily\Invoices\InvoiceServiceProvider::class
 
     ],
 

@@ -41,21 +41,17 @@ class TranslationResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('group')
-                    ->label(trans('translation.group'))
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('namespace')
-                    ->label(trans('translation.namespace'))
                     ->required()
                     ->default('*')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('key')
-                    ->label(trans('translation.key'))
                     ->required()
                     ->maxLength(255),
 
                 Forms\Components\Builder\Block::make('text')
-                    ->label(trans('translation.text'))
                     ->schema($schema),
             ]);
     }

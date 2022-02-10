@@ -137,6 +137,19 @@ return [
         'path' => app_path('Filament'),
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Dark mode
+    |--------------------------------------------------------------------------
+    |
+    | By enabling this feature, your users are able to select between a light
+    | and dark appearance for the admin panel, or let their system decide.
+    |
+    */
+
+    'dark_mode' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Layout
@@ -204,7 +217,7 @@ return [
         'auth' => [
             Authenticate::class,
             Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-            LanguageMiddleware::class
+            \io3x1\FilamentTranslations\Http\Middleware\LanguageMiddleware::class,
         ],
         'base' => [
             EncryptCookies::class,

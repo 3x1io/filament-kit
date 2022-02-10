@@ -2,13 +2,11 @@
 
 namespace App\Filament\Resources\UserResource\Pages;
 
-use App\Filament\Resources\UserResource;
-use Filament\Resources\Pages\ListRecords;
-use Filament\Pages\Actions\ButtonAction;
-use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Models\User;
-use Filament\Forms;
+use App\Filament\Resources\UserResource;
+use Filament\Pages\Actions\ButtonAction;
+use Filament\Resources\Pages\ListRecords;
+use io3x1\FilamentUser\Export\UsersExport;
 
 class ListUsers extends ListRecords
 {
@@ -18,7 +16,6 @@ class ListUsers extends ListRecords
     {
         return array_merge(parent::getActions(), [
             ButtonAction::make('export')->action('export'),
-
         ]);
     }
 
