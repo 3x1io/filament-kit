@@ -18,7 +18,7 @@ Full Kit For Filament Admin Content And Easy Setup for alot of packages
 You can install the package via composer:
 
 ```bash
-composer require 3x1io/filament-kit
+composer create-project 3x1io/filament-kit
 ```
 
 and now clear cache
