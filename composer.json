@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "3x1io/filament-kit",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Full Kit For Filament Admin Content And Easy Setup for alot of packages",
+    "keywords": ["framework", "laravel", "filament", "shield", "excel", "user CLI", "spite"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
