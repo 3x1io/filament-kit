@@ -37,12 +37,6 @@ class AppServiceProvider extends ServiceProvider
             Filament::registerNavigationItems([
                 NavigationItem::make()
                     ->group('Dev')
-                    ->icon('heroicon-o-code')
-                    ->label('Artisan')
-                    ->sort(10)
-                    ->url(url('admin/artisan')),
-                NavigationItem::make()
-                    ->group('Dev')
                     ->icon('heroicon-o-database')
                     ->label('Schema')
                     ->sort(10)

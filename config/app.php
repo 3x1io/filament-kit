@@ -181,7 +181,6 @@ return [
         Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
         LaravelDaily\Invoices\InvoiceServiceProvider::class
-
     ],
 
     /*
