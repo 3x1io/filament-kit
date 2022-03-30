@@ -9,6 +9,7 @@ use RyanChandler\FilamentTools\Tools;
 use Filament\Navigation\NavigationItem;
 use Illuminate\Support\ServiceProvider;
 use Filament\Forms\Components\TextInput;
+use Reworck\FilamentSettings\FilamentSettings;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -49,6 +50,10 @@ class AppServiceProvider extends ServiceProvider
             'CMS',
             'Settings',
             'Dev',
+        ]);
+
+        FilamentSettings::setFormFields([
+            \Filament\Forms\Components\TextInput::make('title'),
         ]);
     }
 }

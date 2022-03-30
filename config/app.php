@@ -174,13 +174,20 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Akaunting\Money\Provider::class,
         Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
-        LaravelDaily\Invoices\InvoiceServiceProvider::class
+        LaravelDaily\Invoices\InvoiceServiceProvider::class,
+        io3x1\FilamentCommands\FilamentCommandsProvider::class,
+        io3x1\FilamentExcel\FilamentExcelProvider::class,
+        io3x1\FilamentThemes\FilamentThemesProvider::class,
+        io3x1\FilamentTranslations\FilamentTranslationsProvider::class,
+        io3x1\FilamentUser\FilamentUserProvider::class,
+
     ],
 
     /*

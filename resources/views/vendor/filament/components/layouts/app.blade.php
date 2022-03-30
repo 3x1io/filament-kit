@@ -1,4 +1,6 @@
 <x-filament::layouts.base :title="$title">
+    <x-tall-interactive::actionables-manager />
+
     <div class="flex min-h-screen w-full filament-app-layout">
         <div x-data="{}" x-cloak x-show="$store.sidebar.isOpen" x-transition.opacity.500ms
             x-on:click="$store.sidebar.close()"

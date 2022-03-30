@@ -17,9 +17,7 @@ class TranslationPolicy
      */
     public function viewAny(User $user)
     {
-        if($user->can('view_any_translation')) {
-            return true;
-        }
+        return $user->can('view_any_translation');
     }
 
     /**
