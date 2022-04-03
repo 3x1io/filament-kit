@@ -7,20 +7,20 @@ return [
     | Defualt Roles
     |--------------------------------------------------------------------------
     |
-    | Permissions' generated will be assigned automatically to the following roles when enabled.
+    | The default is `super_admin` but you can change it to whatever works best for you.
     | `filament_user` if enabled will help smoothly provide access to filament users
-    | in production when implementing `FilamentUser` interface.
+    | in production when implementing `FilamentUser`
     */
 
 
     'super_admin' => [
-        'enabled' => true,
+        'enabled'   => true,
         'role_name' => 'super_admin'
     ],
 
     'filament_user' => [
+        'enabled'   => false,
         'role_name' => 'filament_user',
-        'enabled' => false
     ],
 
     /*
@@ -37,15 +37,7 @@ return [
     */
 
     'prefixes' => [
-        'resource' => [
-            'view',
-            'view_any',
-            'create',
-            'delete',
-            'delete_any',
-            'update',
-            'export', // custom resource permission
-        ],
+        'resource' => ["view","view_any","create","delete","delete_any","update","export"],
         'page'  =>  'view',
         'widget' => 'view'
     ],
@@ -67,21 +59,33 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Resources Generator Option
+    |--------------------------------------------------------------------------
+    | Here you may define the "generator" option for resources.
+    | Sometimes it's beneficial to generate policies once locally, in case the production server
+    | does not allow you to regenerate them (Laravel Vapor) or you have updated the policies.
+    | Choose the option the fits best your use case.
+    |
+    | Supported options: "policies_and_permissions", "policies", "permissions"
+    */
+
+    'resources_generator_option' => '{{ resources_generator_option }}',
+
+    /*
+    |--------------------------------------------------------------------------
     | Exclude
     |--------------------------------------------------------------------------
-    | When enabled Exclude entites listed here during permission generation.
-    |
+    | Generate permissions or permissions with policies for all the entities
+    | except listed here.
+    | Generated Permission name will be formatted as:
+    | Page: `view_page_name` i.e, `SettingsPage` => `view_settings_page`
+    | Widget: `view_widget_name` i.e, `IncomeWidget` => `view_income_widget`
     */
 
     'exclude' => [
         'enabled' => true,
-        'pages' => [
-            'Dashboard'
-        ],
-        'widgets' => [
-            'AccountWidget',
-            'FilamentInfoWidget'
-        ],
+        'pages' => ["Dashboard"],
+        'widgets' => ["AccountWidget","FilamentInfoWidget"],
         'resources' => [],
     ],
 

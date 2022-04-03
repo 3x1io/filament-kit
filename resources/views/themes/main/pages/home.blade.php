@@ -8,87 +8,47 @@
     <title>3x1</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-    <!-- Styles -->
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links>a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-            <a href="{{ url('/home') }}">Home</a>
-            @else
-            <a href="{{ route('login') }}">Login</a>
-            @endauth
-        </div>
-        @endif
+    <header class="shadow-sm">
+        <div class="max-w-screen-xl p-4 mx-auto">
+            <div class="flex items-center justify-between space-x-4 lg:space-x-10">
+                <div class="flex lg:w-0 lg:flex-1">
+                    <span class="w-20 h-10 bg-gray-200 rounded-lg"></span>
+                </div>
 
-        <div class="content">
-            <div style="width: 50%; display: block; margin-left: auto; margin-right: auto">
+                <nav class="hidden space-x-8 text-sm font-medium md:flex">
+                    @livewire('menu', ['key' => "header"])
+                </nav>
+
+                <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
+                    <a class="px-5 py-2 text-sm font-medium text-gray-500 bg-gray-100 rounded-lg" href="">
+                        Log in
+                    </a>
+
+                    <a class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg" href="">
+                        Sign up
+                    </a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button class="p-2 text-gray-600 bg-gray-100 rounded-lg" type="button">
+                        <span class="sr-only">Open menu</span>
+                        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="title">
-                <img width="200px" src="https://svgshare.com/i/bbA.svg" />
-                <br>
-                3x1 Framework Other Theme
-            </div>
-            <p>Full Stack Web Framework Build in Laravel & Craftable</p>
         </div>
-    </div>
+    </header>
+
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
 </html>

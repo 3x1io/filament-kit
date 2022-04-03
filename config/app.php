@@ -187,6 +187,9 @@ return [
         io3x1\FilamentThemes\FilamentThemesProvider::class,
         io3x1\FilamentTranslations\FilamentTranslationsProvider::class,
         io3x1\FilamentUser\FilamentUserProvider::class,
+        io3x1\FilamentBrowser\FilamentBrowserProvider::class,
+        io3x1\FilamentMenus\FilamentMenusProvider::class,
+        io3x1\FilamentSitemap\FilamentSitemapProvider::class,
 
     ],
 
