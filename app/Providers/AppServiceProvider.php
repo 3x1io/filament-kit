@@ -51,9 +51,5 @@ class AppServiceProvider extends ServiceProvider
             'Settings',
             'Dev',
         ]);
-
-        FilamentSettings::setFormFields([
-            \Filament\Forms\Components\TextInput::make('title'),
-        ]);
     }
 }

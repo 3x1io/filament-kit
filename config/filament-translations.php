@@ -12,7 +12,7 @@ return [
     "paths" => [
         app_path(),
         resource_path('views'),
-        base_path('vendor/filament')
+        base_path('vendor')
     ],
 
     /*
@@ -27,6 +27,7 @@ return [
         "en" => "English",
         "ar" => "Arabic",
         "pt_BR" => "Português (Brasil)",
+        "my" => "Burmese"
     ],
 
     /*
@@ -49,7 +50,7 @@ return [
     */
     "switcher" => [
         "ar",
-        "en"
+        "en",
     ],
 
     /*
@@ -65,6 +66,7 @@ return [
         "group" => "Translations",
         "icon" => "heroicon-o-translate",
         "sort" => 10,
+        "url" => 'admin/translations/change'
     ],
 
     /*

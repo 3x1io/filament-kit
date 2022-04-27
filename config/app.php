@@ -190,6 +190,7 @@ return [
         io3x1\FilamentBrowser\FilamentBrowserProvider::class,
         io3x1\FilamentMenus\FilamentMenusProvider::class,
         io3x1\FilamentSitemap\FilamentSitemapProvider::class,
+        io3x1\FilamentCMS\FilamentCMSProvider::class,
 
     ],
 
